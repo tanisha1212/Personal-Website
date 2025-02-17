@@ -1,0 +1,74 @@
+body {
+    font-family: 'Sofia', sans-serif;
+    background-color: #f8e1f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s ease;
+}
+header {
+    background-color: #e0aad7;
+    text-align: center;
+    padding: 2rem;
+    font-family: 'Caveat', cursive;
+    color: #fff;
+}
+header h1 {
+    font-size: 3rem;
+    margin: 0;
+}
+header p {
+    font-size: 1.5rem;
+}
+section {
+    padding: 2rem;
+    margin: 2rem;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+section h2 {
+    font-family: 'Borel', serif;
+    font-size: 2.5rem;
+    color: #f06f87;
+}
+section p {
+    font-size: 1.25rem;
+    line-height: 1.6;
+}
+.links a {
+    color: #f06f87;
+    text-decoration: none;
+    font-size: 1.25rem;
+    margin-right: 1rem;
+}
+footer {
+    background-color: #e0aad7;
+    text-align: center;
+    padding: 1rem;
+    color: #fff;
+}
+.toggle-btn {
+    background-color: #f06f87;
+    color: white;
+    padding: 0.5rem 1rem;
+    font-size: 1.25rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 2rem;
+}
+.dark-mode {
+    background-color: #5b2f8e;
+    color: #fff;
+}
+.dark-mode header {
+    background-color: #7a4d99;
+}
+.dark-mode section {
+    background-color: #6e3b77;
+    color: #fff;
+}
+.dark-mode footer {
+    background-color: #7a4d99;
+}
