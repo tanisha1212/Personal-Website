@@ -1,80 +1,130 @@
 /* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Sofia', sans-serif;
     background-color: #f8e1f4;
     color: #333;
-    margin: 0;
-    padding: 0;
-    transition: background-color 0.4s ease, color 0.4s ease;
+    line-height: 1.6;
 }
 
-/* Header Styling */
-header {
-    background-color: #e0aad7;
-    text-align: center;
-    padding: 3rem;
-    font-family: 'Caveat', cursive;
-    color: #fff;
-    animation: fadeIn 1s ease-out;
+/* Navbar Styling */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 1rem 2rem;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-header h1 {
-    font-size: 3.5rem;
-    margin: 0;
-    text-transform: uppercase;
-    letter-spacing: 2px;
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-header p {
+.navbar .logo {
     font-size: 1.8rem;
+    font-weight: bold;
+    color: #f06f87;
+    text-transform: uppercase;
+}
+
+.navbar .nav-links {
+    list-style-type: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar .nav-links li {
+    font-size: 1.1rem;
+}
+
+.navbar .nav-links a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-links a:hover {
+    color: #f06f87;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background-color: #f06f87;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    position: relative;
+}
+
+.hero-content h2 {
+    font-size: 4rem;
+    font-family: 'Caveat', cursive;
+    margin-bottom: 0.5rem;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    font-weight: lighter;
 }
 
 /* Section Styling */
 section {
-    padding: 3rem;
-    margin: 2rem;
-    background-color: #fff;
-    border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    opacity: 0;
-    transform: translateY(50px);
-    animation: slideIn 1s forwards ease-out;
+    padding: 3rem 5%;
+    text-align: center;
+    margin-top: 10rem; /* Add space below the sticky navbar */
 }
 
 section h2 {
-    font-family: 'Borel', serif;
     font-size: 2.5rem;
     color: #f06f87;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
 }
 
 section p {
     font-size: 1.25rem;
-    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
     color: #555;
 }
 
-/* Hover Effect for Links */
-.links a {
+/* Project Links */
+.projects .links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.projects .links a {
     color: #f06f87;
     text-decoration: none;
     font-size: 1.5rem;
-    margin-right: 1rem;
-    transition: transform 0.3s ease, color 0.3s ease;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
-.links a:hover {
-    transform: scale(1.1);
+.projects .links a:hover {
     color: #fff;
+    transform: scale(1.1);
 }
 
-/* Toggle Button Styling */
+/* Button Styling */
 .toggle-btn {
     background-color: #f06f87;
     color: white;
-    padding: 0.75rem 1.5rem;
+    padding: 0.75rem 2rem;
     font-size: 1.5rem;
     border: none;
     border-radius: 5px;
@@ -95,7 +145,6 @@ footer {
     padding: 2rem;
     color: #fff;
     font-size: 1.2rem;
-    animation: fadeIn 2s ease-out;
 }
 
 /* Dark Mode Styling */
@@ -111,52 +160,8 @@ footer {
 .dark-mode section {
     background-color: #6e3b77;
     color: #fff;
-    opacity: 1;
-    transform: translateY(0);
 }
 
 .dark-mode footer {
     background-color: #7a4d99;
-}
-
-/* Animations */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes slideIn {
-    from {
-        opacity: 0;
-        transform: translateY(50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Smooth Scroll */
-html {
-    scroll-behavior: smooth;
-}
-
-/* Media Query for Responsiveness */
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 2.5rem;
-    }
-    header p {
-        font-size: 1.5rem;
-    }
-    section h2 {
-        font-size: 2rem;
-    }
-    .toggle-btn {
-        font-size: 1.2rem;
-    }
 }
